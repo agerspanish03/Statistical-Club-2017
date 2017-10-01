@@ -4,6 +4,7 @@
 Created on Fri Sep 29 22:29:54 2017
 
 @author: AlexChen
+for data analysis
 """
 import pandas as pd
 import numpy as np
