@@ -42,20 +42,6 @@ def EDA_2():
     sns.swarmplot(x="survived", y="age", hue="pclass", data=titanic)
     plt.show()
 
-def linearRegplot(data,X,Y):
-    #sns.lmplot(x=X,y=Y,data=data)
-    sns.regplot(x=X, y=Y, data=data, color='blue', label='order 1')
-    plt.show()
-    sns.residplot(x=X, y=Y, data=data, color='green')
-    plt.show()
-#linearRegplot(titanic,"age","fare")
-
-
-def boxplot(data,X,Y):
-    sns.boxplot(x=X, y=Y, data=data)
-    plt.show()
-#boxplot(df_test1,"survived","age")
-
 "Machine Learning"
 "KNN"
 def KNN_choose_K(X,y,K): 
@@ -118,7 +104,7 @@ def KNN_simulate(X,y,K,CV,n):
     print("Accuracy with CV:",np.mean(CV_N_fold))
     #print("Accuracy without CV:",accuracy)
     #print("Accuracy with CV:",CV_N_fold)
-#KNN_simulate(X,y,10,10,100)
+
 
 "Logistic"
 def logit_CrossValid_Plot(X,y,CV):
@@ -168,7 +154,7 @@ def logit_CrossValid(X,y,CV):
     from sklearn.linear_model import LogisticRegression
 
     # Create training and test sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.4)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
     # Create the classifier: logreg
     logreg = LogisticRegression()
     logreg.fit(X_train,y_train)
@@ -196,7 +182,7 @@ def logit_simulate(X,y,CV,n):
     #print("AUC without CV:",AUC)
     #print("AUC with CV:",CV_N_fold)
 
-#logit_simulate(X,y,10,100)
+
 
 
 
